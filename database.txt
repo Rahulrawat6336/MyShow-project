@@ -1,0 +1,40 @@
+states
+------
+stateid
+statename
+
+city
+---
+cityid
+cityname
+stateid
+
+cinema
+------
+cinemaid
+cityid
+cinemaname
+
+screens
+-------
+screenid
+cinemaid
+screenname
+
+moviedetails
+------------
+movieid pk
+stateid fk 
+cityid fk
+cinemaid fk 
+screenid fk
+
+moviename 
+description
+releasedate date
+ticketprice
+status 2d 3d
+poster
+actor
+actress
+singer

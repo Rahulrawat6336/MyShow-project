@@ -1,0 +1,126 @@
+<link href="/stylesheets/style.css" rel="stylesheet">
+
+<html>
+    <form action="/movie/Edit_delete_movie" method="post">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit:wght@200&family=Lato:wght@300&family=Poppins:ital,wght@1,200&family=Roboto+Slab:wght@200&family=Young+Serif&display=swap"
+        rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="/javascripts/project.js"></script>
+</head>
+<input type="hidden" value="<%=data.movieid%>" name="movieid">
+
+
+<div class="maincontainer">
+    <div class="box">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 headstyle" style="font-size: 35px;align-items: center;font-weight: bolder;">
+                    <span><img src="/images/movie.png" width="60px"></span>
+                    <span>Movie ticket</span>
+                    <span style="margin-left: auto;"><a href="/movie/displayallmovie"><img src="/images/List.png" width="45"></a></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <hr width="680px">
+                </div>
+            </div>
+            <div class="row headstyle" style="margin-top: 8px;">
+                <div class="col-sm-6">
+                    <select class="form-select" id="stateid" name="stateid">
+                        <option value="<%=data.stateid%>"><%=data.statename%></option>
+                    </select>
+                </div>
+                <div class="col-sm-6">
+                    <select class="form-select" id="cityid" name="cityid">
+                        <option value="<%=data.cityid%>"><%=data.cityname%></option>
+                    </select>
+                </div>
+            </div>
+            <div class="row headstyle" style="margin-top: 8px;">
+                <div class="col-sm-6">
+                    <select class="form-select" id="cinemaid" name="cinemaid">
+                        <option value="<%=data.cinemaid%>"><%=data.cinemaname%></option>
+                    </select>
+                </div>
+                <div class="col-sm-6">
+                    <select class="form-select" id="screenid" name="screenid">
+                        <option value="<%=data.screenid%>"><%=data.screenname%></option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 headstyle" style="margin-top: 8px;">
+                    <input type="text" placeholder="moviename" value="<%=data.moviename%>" class="form-control" id="moviename" name="moviename">
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col-sm-12 " class="headstyle" style="margin-top: 8px;">
+                    <div class="form-floating">
+                        <textarea class="form-control"  placeholder="Description" id="description"
+                            name="description"><%=data.description%></textarea>
+                        <label for="floatingTextarea"></label>
+                    </div>
+                </div>
+            </div>
+            <div class="row headstyle" style="margin-top: 8px;">
+                <div class="col-sm-6">
+                    <input type="date" class="form-control" style="text-decoration: none;" value="<%=data.releasedate%>" placeholder="Release date" name="releasedate"
+                        id="releasedate">
+                </div>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" placeholder="ticket price" id="ticketprice"
+                        name="ticketprice" value="<%=data.ticketprice%>">
+                </div>
+            </div>
+
+            <div class="row headstyle" style="margin-top: 8px;">
+                <div class="col-sm-6">
+                    <input type="text" name="actorname" placeholder="actor" value="<%=data.actorname%>" id="actorname" class="form-control">
+                </div>
+                <div class="col-sm-6">
+                    <input type="text" name="actressname" placeholder="actress" value="<%=data.actressname%>" id="actressname"  class="form-control">
+                </div>
+            </div>
+            
+            <div class="row " style="margin-top: 8px;">
+                <div class="col-sm-12">
+                    <span>Status:</span>
+                    <div class="form-check form-check-inline">
+                        <input <%= data.status=="2D"||data.status=="2D,3D"?"checked":''%> class="form-check-input" type="checkbox" name="status" id="status" value="2D">
+                        <label class="form-check-label" for="status">2D</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input <%= data.status=="3D"||data.status=="2D,3D"?"checked":''%> class="form-check-input" type="checkbox"name="status" id="status" value="3D">
+                        <label class="form-check-label" for="status">3D</label>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row headstyle" style="margin-top: 8px;">
+                <div class="col-sm-6">
+                    <input type="submit" name="btn" value="Edit" class="btn btn-primary" value="Edit" style="width: 340px;">
+                </div>
+                <div class="col-sm-6">
+                    <input type="submit" name="btn" value="delete" class="btn btn-primary" value="Delete" style="width: 340px;">
+                </div>
+            </div>
+          
+        </div>
+    </div>
+</div>
+</form>
+
+</html>

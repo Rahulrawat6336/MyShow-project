@@ -1,0 +1,13 @@
+<html>
+
+    <center>
+        <form action="/movie/edit_picture" method="post" enctype="multipart/form-data">
+            <input type="hidden" value="<%=data.movieid%>" name="movieid">
+        <h1><%=data.moviename%></h1>
+        <img src="/images/<%=data.picture%>" style="width: 300;">
+        <h3>Edit picture:</h3>
+        <input type="file" name="picture" required><br><br>
+        <input type="submit" value="Edit picture">
+    </center>
+    </form>
+</html>

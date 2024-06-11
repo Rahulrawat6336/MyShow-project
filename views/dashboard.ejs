@@ -1,0 +1,121 @@
+<style>
+    body {
+        margin: 0px;
+    }
+
+    .maincontainer {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        background-color: #bdc3c7;
+    
+
+
+    }
+
+    .box {
+        height: 60;
+        width: auto;
+        background-color: black;
+        display: flex;
+
+
+    }
+
+    .fontstyle {
+        font-family: Roboto+Slab;
+        font-size: 40;
+        color: #f2f2f2;
+    }
+
+    .boxright {
+
+        width: 250;
+        height: auto;
+        background-color: #f2f2f2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0;
+    }
+
+    .fontbox {
+        font-size: 10px;
+        color: blue;
+        margin-top: 6px;
+    }
+
+    .boxleft {
+
+        width: 100vw;
+        height: 660;
+        background-color: #bdc3c7;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+    }
+</style>
+<html>
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Kanit:wght@200&family=Lato:wght@300&family=Poppins:ital,wght@1,200&family=Roboto+Slab:wght@200&family=Roboto:wght@500&family=Young+Serif&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/29b9ea0c98.js" crossorigin="anonymous"></script>
+</head>
+<div class="maincontainer">
+    <div class="box">
+
+
+        <div class="col-sm-12 fontstyle"
+            style="margin-top: 10px;align-items: center; margin-left: 50px; display: flex;">
+            <img src="/images/pvr.webp" style="width: 80;align-items: center; display: flex;margin-bottom: 10px;">
+            <span style="font-size: 20; margin-left:1150;"><i class="fa-solid fa-right-from-bracket fa-beat-fade"></i> Logout</span>
+        </div>
+    </div>
+    <div class=" row " style="display: flex; flex-direction: row;">
+        <div class="col-sm-2 boxright">
+            <div class="col">
+                <img src="/images/<%=data.picture%>"
+                    style="width: 50; height: 50; border-radius: 50px; justify-content: center;margin-top: 8px;">
+            </div>
+            <div class="col" style="font-weight: bolder; margin-top: 5px;">
+                <%=data.adminname%>
+            </div>
+            <div class="col fontbox">
+                <%=data.emailid%>
+            </div>
+            <div class="col fontbox">
+                +91<%=data.mobileno%>
+            </div>
+
+            <div class="row" style="font-family: Roboto+Slab;font-weight: bold; margin-top: 100px;">
+                <div class="col">
+                    <i class="fa-solid fa-cart-plus fa-beat-fade"></i><a href="/movie/movieinterface" target="mw"
+                        style="color: black;text-decoration: none;">New Movie</a>
+                </div>
+                <div class="col" style="margin-top: 12px;">
+                    <i class="fa-solid fa-rectangle-list fa-beat-fade"></i><a href="/movie/displayallmovie" target="mw"
+                        style="color: black;text-decoration: none;">Movie List</a>
+                </div>
+                <div class="col" style="margin-top: 12px;">
+                    <i class="fa-solid fa-right-from-bracket fa-beat-fade"></i><a href="/admin/logout" style="text-decoration: none;color: black;">Logout</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-10 boxleft" style=" justify-content: center; align-items: center; display: flex;">
+            <iframe name="mw" frameborder="0" height="100%" width="100%" scrolling="no"></iframe>
+
+        </div>
+    </div>
+
+
+
+
+</div>
+
+</html>

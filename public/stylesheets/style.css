@@ -1,0 +1,53 @@
+.maincontainer{
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-color:#dff9fb;
+  align-items: center;
+}
+.box{
+  
+  width: 700px;
+  height: auto;
+  background-color:#ffffff;
+  display: flex;
+  border-radius: 8px;
+  flex-direction: column;
+  
+}
+.headstyle{
+  margin-top: 8px;
+  display: flex;
+  font-family: Roboto Slab;
+  font-size: 25px;
+
+}
+.moviestyle{
+  
+  width: 1000px;
+  height: auto;
+  background-color:#ffffff;
+  display: flex;
+  border-radius: 8px;
+  flex-direction: column;
+  
+}
+
+.maincontainerlogin{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  background-color:ffff;
+
+}
+.loginbox{
+
+  width: 95%;
+  height:auto; 
+  background-color: ffff;
+  
+}
